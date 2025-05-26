@@ -7,4 +7,7 @@ import com.ict.edu01.members.vo.MembersVO;
 @Mapper
 public interface MembersMapper {
     MembersVO getLogin(MembersVO mvo);
+    int addMember(MembersVO mvo);
+
+    MembersVO getMemberByIdx(int m_idx);
 }

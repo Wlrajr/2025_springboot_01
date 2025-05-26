@@ -7,11 +7,6 @@ import com.ict.edu01.members.service.MembersService;
 import com.ict.edu01.members.vo.DataVO;
 import com.ict.edu01.members.vo.MembersVO;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.xml.crypto.Data;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -72,5 +67,29 @@ public class MembersController {
 
         return dataVO;
     }
+
+    @PostMapping("/register")
+    public DataVO signUp(@RequestBody MembersVO mvo) {
+        DataVO dataVO = new DataVO();
+
+        try {
+            MembersVO registeredMember = membersService.addMember(mvo);
+
+            if (registeredMember != null) {
+                dataVO.setSuccess(true);
+                dataVO.setMessage("회원가입 성공");
+                dataVO.setData(registeredMember);
+            } else {
+                dataVO.setSuccess(false);
+                dataVO.setMessage("회원가입 실패");
+            }
+        } catch (Exception e) {
+            dataVO.setSuccess(false);
+            dataVO.setMessage("서버 오류: " + e.getMessage());
+        }
+        return dataVO;
+    }
+
+    
 
 }
