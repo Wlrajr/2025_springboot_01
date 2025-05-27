@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ict.edu01.members.service.MembersService;
-import com.ict.edu01.members.vo.DataVO;
+import com.ict.edu01.common.DataVO;
 import com.ict.edu01.members.vo.MembersVO;
 
 import org.springframework.beans.factory.annotation.Autowired;

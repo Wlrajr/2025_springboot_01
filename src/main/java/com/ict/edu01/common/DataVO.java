@@ -1,4 +1,4 @@
-package com.ict.edu01.members.vo;
+package com.ict.edu01.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
