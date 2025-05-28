@@ -1,4 +1,4 @@
-package com.ict.edu01.common;
+package com.ict.edu01.members.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DataVO {
-    // 클라이언트에 결과를 보낼 때 사용하는 vo
+    // 클라이언트에게 결과를 보낼때 사용하는 VO
     private boolean success ;
-    private String message ;
-    private Object data;
+    private String message;
+    private Object data ;
+
 }

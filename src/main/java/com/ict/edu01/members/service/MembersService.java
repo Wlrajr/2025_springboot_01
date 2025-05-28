@@ -4,5 +4,6 @@ import com.ict.edu01.members.vo.MembersVO;
 
 public interface MembersService {
     MembersVO getLogin(MembersVO mvo);
-    MembersVO addMember(MembersVO mvo);
-}
+    int getRegister(MembersVO mvo);
+    MembersVO getMemberInfo(String m_idx);
+} 
